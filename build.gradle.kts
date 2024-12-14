@@ -23,6 +23,6 @@ kotlin {
 
 tasks {
     wrapper {
-        version = "8.11"
+        version = "8.11.1"
     }
 }
