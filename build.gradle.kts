@@ -11,6 +11,10 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    implementation("com.google.guava:guava:33.3.1-jre")
+}
+
 kotlin {
     sourceSets.all {
         languageSettings {
