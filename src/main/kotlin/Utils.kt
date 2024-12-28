@@ -37,3 +37,27 @@ fun createDayPackage(day: Int) {
         part2File.writeText(dayContent)
     }
 }
+
+data class Person(
+    val firstName: String,
+    val lastName: String,
+    val age: Int
+)
+
+fun <T> T.satisfiesAll(vararg conditions: T.() -> Boolean): Boolean {
+    return conditions.all { condition -> condition(this) }
+}
+
+fun <T> T.satisfiesOne(vararg conditions: T.() -> Boolean): Boolean {
+    return conditions.any { condition -> condition(this) }
+}
+//
+//fun main() {
+//    val person = Person("John", "Doe", 30)
+//    if (person.age >= 18 && person.firstName == "John") {
+//        println("Adult and name John")
+//    }
+//    if (person.satisfiesAll({ age >= 18 }, { firstName == "John" })) {
+//        println("Adult and name John")
+//    }
+//}
